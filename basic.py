@@ -103,15 +103,69 @@ class Interm():
 		print("Least wastage: ", names[np.argmin(waste)], "at", paints[names[np.argmin(waste)]][6], " L")
 
 
-	def filewrite(intput)
-
 Interm.paintwizard(100,2.5)
+
 
 class person:
 
-	def __init__(self, name, occup, age)
+	def __init__(self, name, occup, age):
 		self.name = name
 		self.occup = occup
 		self.age = age
+
+	def displayPerson(self):
+		out = "Person :", self.name, " ", self.occup," ", self.age
+		print("Name: ", self.name, "Occupation: ", self.occup, "Age: ", self.age)
+		return out
+
+
+per1 = person("Jim", "Taxi Driver", 32)
+per2 = person("Mike", "Mechanic", 36)
+per3 = person("Chris", "Train Driver", 42)
+per4 = person("Ali", "Carer", 28)
+per5 = person("Elliott", "Pokemon Master", 24)
+
+class personapp:
+
+	people = []
+
+	def __init__(self):
+		pass
+
+	def populate():
+		personapp.people.append(per1)
+		personapp.people.append(per2)
+		personapp.people.append(per3)
+		personapp.people.append(per4)
+		personapp.people.append(per5)
+
+	def writel():
+
+		outfile = open("file.txt", "w+")
+
+		for i in personapp.people:
+			output = "Person :", i.name, i.occup, i.age
+			outfile.write(str(output))
+			outfile.write("\n")
+
+		outfile.close()
+
+	def readl(path):
+		newpeople = []
+
+		infile = open(path, "r")
+		lines = infile.readlines()
+
+		for i in lines:
+			output = i.replace("'Person :', ", "", 1)
+			newpeople.append(output)
+			print(output)
+		
+
+
+personapp.populate()
+personapp.writel()
+personapp.readl("file.txt")
+
 
 

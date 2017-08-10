@@ -1,0 +1,10 @@
+<class '__main__.Book'>
+(0, 'Peter Rabbit', False, 'Beatrix Potter', 'Hardback', 1950)
+<class '__main__.Book'>
+(1, '50 Shades of Dev', False, 'Ladon Jackson', 'Paperback', 2017)
+<class '__main__.Map'>
+(2, 'LandRanger 125', False, '1:50,000', 'OS', 2016)
+<class '__main__.Journal'>
+(3, 'British Medical Journal', True, 23, 'BMA', 2004)
+<class '__main__.Newspaper'>
+(4, 'Manchester Evening news', False, '25/07/2017')
