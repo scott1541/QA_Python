@@ -1,3 +1,4 @@
+import unittest
 from pprint import pprint
 
 #Library
@@ -298,3 +299,21 @@ class Library:
 		Library.openLibrary()
 
 Library.openLibrary()
+
+
+
+class TestLibrary(unittest.TestCase):
+
+	def test_InsertBook(self):
+		Library.stock.append(Book(15, "test-title", True, "mrtesty", "Hardback", 2004))
+
+		for s in libraryInstance.stock:
+			if(s.idnum == 15):
+				self.assertEqual(s.title, "test-title")
+				self.assertEqual(s.status, True)
+				self.assertEqual(s.author, "mrtesty")
+				self.assertEqual(s.btype, "Hardback")
+				self.assertEqual(s.year, 2004)
+
+if __name__ == '__main__':
+	unittest.main()
